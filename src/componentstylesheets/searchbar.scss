@@ -1,0 +1,66 @@
+
+$gray:#777676;
+$white:#fff;
+$dodgerBlue:#1E90FF;
+
+.searchbar-main-content{
+    display: grid;
+    place-content: start;
+    align-items: start;
+    margin-left: 5% !important;
+}
+.searchbar-sub-content{
+    display: grid;
+    grid-template-columns: 10% 65%;
+}
+.header{
+    margin: 0;
+}
+
+.subheader{
+    font-size: small; 
+    color: $gray;
+    margin: 0;
+}
+
+.searchbar-searcharea{
+        display: flex;
+        margin-top: 1rem;
+
+.searchbar-select-borderbox{
+    border-color:$dodgerBlue;
+    box-shadow:0 0 8px 0 $dodgerBlue;
+    }    
+    .searchbar-select {
+        border:0;
+        background-color: $white;
+        color: $gray;
+        cursor: pointer;
+      }
+     
+      .search-box{
+        width:20rem;
+        border:1px solid $gray;
+        border-radius:4px;
+        margin:8px 8px;
+        outline:none;
+        padding:1rem;
+        box-sizing:border-box;
+        transition:.3s;
+      }
+      .search-box:focus{
+        @extend .searchbar-select-borderbox;
+      }
+      .searchbar-select:focus{
+        @extend .searchbar-select-borderbox;
+      }
+}
+
+@media screen and (max-width: 768px) {
+  .searchbar-main-content{
+    display: grid;
+    place-content: center;
+    align-items: center;
+    margin-left: 3%;
+  }
+}
